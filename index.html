@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pro Battle Arena | BGMI TDM Solo Tournament</title>
-
-  <meta name="description" content="BGMI TDM Solo Tournament | Low Entry Fee | High Winning | Hindi + English Gaming Platform">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Pro Battle Arena | TDM Tournaments</title>
+  <meta name="description" content="TDM SOLO, DUO & SQUAD tournaments. Entry ₹10–₹500. 10-minute matches. Hindi + English." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header class="hero">
   <h1>Pro Battle Arena</h1>
-  <p>BGMI TDM SOLO Tournament | हिंदी + English</p>
+  <p>TDM Tournaments • SOLO / DUO / SQUAD • ₹10–₹500 • 10 Minutes</p>
+  <a class="btn" href="#live">Join Live Tournament</a>
 </header>
 
-<section class="box">
+<main class="wrap">
 
-  <h2>🔥 TDM Tournament (SOLO)</h2>
-  <p class="sub">
-    Fast match • One winner • Highest kills wins<br>
-    तेज़ मैच • एक ही विजेता • तुरंत रिज़ल्ट
-  </p>
+  <!-- LIVE TOURNAMENT -->
+  <section id="live" class="card live">
+    <h2>🔥 Live Tournament</h2>
+    <div class="grid">
+      <div>
+        <p><b>Mode:</b> TDM SOLO (1v1)</p>
+        <p><b>Players:</b> 2</p>
+        <p><b>Entry Fee:</b> ₹20</p>
+        <p><b>Duration:</b> 10 Minutes</p>
+        <p><b>Prize:</b> Winner gets prize (UPI)</p>
+      </div>
+      <div class="timer">
+        <h3>⏳ Starts In</h3>
+        <p id="countdown">Loading…</p>
+      </div>
+    </div>
+    <a class="btn primary" href="https://wa.me/91XXXXXXXXXX" target="_blank">Pay & Join</a>
+    <p class="note">Payment first • No refund after start</p>
+  </section>
 
-  <div class="details">
-    <p><b>Mode:</b> TDM – SOLO (1 vs All)</p>
-    <p><b>Players:</b> 12 – 16</p>
-    <p><b>Entry Fee:</b> ₹20</p>
-    <p><b>Winner Prize:</b> ₹200 (Only 1 Winner)</p>
-    <p><b>Map:</b> Warehouse</p>
-  </div>
+  <!-- MODES -->
+  <section class="card">
+    <h2>🎮 Tournament Modes</h2>
 
-  <div class="timer">
-    <h3>⏳ Match Starts In</h3>
-    <p id="countdown">Loading...</p>
-  </div>
+    <div class="mode">
+      <h3>SOLO (1v1)</h3>
+      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500</p>
+      <p>Winner: 1 • Time: 10 minutes</p>
+    </div>
 
-  <div class="payment">
-    <p><b>Payment:</b> UPI / Google Pay / PhonePe</p>
-    <p><b>Prize Delivery:</b> Within 24 Hours (UPI)</p>
-  </div>
+    <div class="mode">
+      <h3>DUO (2v2)</h3>
+      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500 (per player)</p>
+      <p>Winner Team • Kill-based split • 10 minutes</p>
+    </div>
 
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
-    Pay Entry Fee & Join
-  </a>
+    <div class="mode">
+      <h3>SQUAD (4v4)</h3>
+      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500 (per player)</p>
+      <p>Winner Team • Kill-based split • 10 minutes</p>
+    </div>
+  </section>
 
-</section>
+  <!-- RULES -->
+  <section class="card">
+    <h2>📜 Rules</h2>
+    <ul class="rules">
+      <li>No hacks / cheats</li>
+      <li>Emulator not allowed</li>
+      <li>Prize only for winning side</li>
+      <li>Kill-based distribution where applicable</li>
+      <li>Screenshot / recording mandatory</li>
+      <li>Admin decision final</li>
+    </ul>
+  </section>
 
-<section class="box">
-  <h2>💰 Profit System (Transparent)</h2>
-  <p>
-    Example:<br>
-    15 Players × ₹20 = ₹300 Collection<br>
-    Winner Prize = ₹200<br>
-    <b>Your Profit = ₹100</b>
-  </p>
-</section>
+  <!-- DISCLAIMER -->
+  <section class="card">
+    <h2>⚠️ Disclaimer</h2>
+    <p>This is a skill-based gaming tournament platform. We are not affiliated with any game publisher.</p>
+  </section>
 
-<section class="box">
-  <h2>📜 Rules | नियम</h2>
-  <ul>
-    <li>TDM SOLO only</li>
-    <li>Highest kills = Winner</li>
-    <li>No hacks / no cheats</li>
-    <li>Emulator not allowed</li>
-    <li>No refund after match start</li>
-  </ul>
-</section>
-
-<section class="box">
-  <h2>⚠️ Disclaimer</h2>
-  <p>
-    This is a skill-based gaming tournament platform.<br>
-    We are not affiliated with BGMI or KRAFTON.
-  </p>
-</section>
+</main>
 
 <footer>
-  <p>© 2026 Pro Battle Arena | Skill Based Gaming</p>
+  <p>© 2026 Pro Battle Arena • Play Fair • Skill Based</p>
 </footer>
 
 <script>
-  // 🔧 CHANGE DATE & TIME HERE
-  const matchTime = new Date("2026-02-01T18:00:00").getTime();
-
+  // 10-minute countdown (change date/time when needed)
+  const startAt = new Date("2026-02-01T18:00:00").getTime();
+  const el = document.getElementById("countdown");
   setInterval(() => {
-    const now = new Date().getTime();
-    const diff = matchTime - now;
-
-    if (diff <= 0) {
-      document.getElementById("countdown").innerHTML = "MATCH STARTED";
-      return;
-    }
-
-    const h = Math.floor(diff / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML =
-      h + "h " + m + "m " + s + "s";
+    const d = startAt - Date.now();
+    if (d <= 0) { el.textContent = "LIVE"; return; }
+    const m = Math.floor(d/60000);
+    const s = Math.floor((d%60000)/1000);
+    el.textContent = m + "m " + s + "s";
   }, 1000);
 </script>
 

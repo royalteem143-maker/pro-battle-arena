@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pro Battle Arena | BGMI Tournaments</title>
+  <title>Pro Battle Arena | BGMI TDM Solo Tournament</title>
 
-  <meta name="description" content="Pro Battle Arena – Daily BGMI Tournaments | हिंदी + English | Paid & Free Custom Rooms">
-  <meta name="keywords" content="BGMI tournament, BGMI custom room, BGMI paid match, BGMI free tournament">
+  <meta name="description" content="BGMI TDM Solo Tournament | Low Entry Fee | High Winning | Hindi + English Gaming Platform">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Search Console verification -->
-  <meta name="google-site-verification" content="6pXnkQ_Z8fUZSlNm9Iapprzvdo_L70PU4gDKCeN4MwU" />
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,47 +13,95 @@
 
 <header class="hero">
   <h1>Pro Battle Arena</h1>
-  <p>Daily BGMI Tournaments | हिंदी + English</p>
-  <a href="#join" class="btn">Join Tournament</a>
+  <p>BGMI TDM SOLO Tournament | हिंदी + English</p>
 </header>
 
-<section class="container">
+<section class="box">
 
-  <div class="card">
-    <h2>🎮 Today’s BGMI Match</h2>
-    <p><b>Match Type:</b> Squad</p>
-    <p><b>Entry Fee:</b> ₹25</p>
-    <p><b>Prize Pool:</b> ₹500</p>
-    <p><b>Time:</b> 8:00 PM</p>
+  <h2>🔥 TDM Tournament (SOLO)</h2>
+  <p class="sub">
+    Fast match • One winner • Highest kills wins<br>
+    तेज़ मैच • एक ही विजेता • तुरंत रिज़ल्ट
+  </p>
+
+  <div class="details">
+    <p><b>Mode:</b> TDM – SOLO (1 vs All)</p>
+    <p><b>Players:</b> 12 – 16</p>
+    <p><b>Entry Fee:</b> ₹20</p>
+    <p><b>Winner Prize:</b> ₹200 (Only 1 Winner)</p>
+    <p><b>Map:</b> Warehouse</p>
   </div>
 
-  <div class="card" id="join">
-    <h2>📝 How to Join | कैसे Join करें</h2>
-    <ul>
-      <li>Google Form से Register करें</li>
-      <li>UPI से Entry Fee Pay करें</li>
-      <li>WhatsApp / Telegram Group Join करें</li>
-      <li>Room ID & Password Time पर मिलेगा</li>
-    </ul>
-
-    <!-- Replace link later -->
-    <a class="btn" href="#" target="_blank">Register Now</a>
+  <div class="timer">
+    <h3>⏳ Match Starts In</h3>
+    <p id="countdown">Loading...</p>
   </div>
 
-  <div class="card">
-    <h2>📜 Rules | नियम</h2>
-    <ul>
-      <li>No hacking / cheating</li>
-      <li>Emulator strictly not allowed</li>
-      <li>Late entry not allowed</li>
-      <li>Follow BGMI fair play rules</li>
-    </ul>
+  <div class="payment">
+    <p><b>Payment:</b> UPI / Google Pay / PhonePe</p>
+    <p><b>Prize Delivery:</b> Within 24 Hours (UPI)</p>
   </div>
 
-  <div class="card">
-    <h2>⚠️ Disclaimer</h2>
-    <p>
-      This is a skill-based gaming tournament platform.  
-      We are not affiliated with BGMI or KRAFTON.  
-      Winning depends on player skills.
-    </p>
+  <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+    Pay Entry Fee & Join
+  </a>
+
+</section>
+
+<section class="box">
+  <h2>💰 Profit System (Transparent)</h2>
+  <p>
+    Example:<br>
+    15 Players × ₹20 = ₹300 Collection<br>
+    Winner Prize = ₹200<br>
+    <b>Your Profit = ₹100</b>
+  </p>
+</section>
+
+<section class="box">
+  <h2>📜 Rules | नियम</h2>
+  <ul>
+    <li>TDM SOLO only</li>
+    <li>Highest kills = Winner</li>
+    <li>No hacks / no cheats</li>
+    <li>Emulator not allowed</li>
+    <li>No refund after match start</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>⚠️ Disclaimer</h2>
+  <p>
+    This is a skill-based gaming tournament platform.<br>
+    We are not affiliated with BGMI or KRAFTON.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 Pro Battle Arena | Skill Based Gaming</p>
+</footer>
+
+<script>
+  // 🔧 CHANGE DATE & TIME HERE
+  const matchTime = new Date("2026-02-01T18:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = matchTime - now;
+
+    if (diff <= 0) {
+      document.getElementById("countdown").innerHTML = "MATCH STARTED";
+      return;
+    }
+
+    const h = Math.floor(diff / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      h + "h " + m + "m " + s + "s";
+  }, 1000);
+</script>
+
+</body>
+</html>

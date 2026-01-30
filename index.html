@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Pro Battle Arena | TDM Tournaments</title>
-  <meta name="description" content="TDM SOLO, DUO & SQUAD tournaments. Entry ₹10–₹500. 10-minute matches. Hindi + English." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+
+  <meta name="description" content="TDM SOLO, DUO & SQUAD tournaments. Entry ₹10–₹500. 10-minute matches. Skill based gaming platform.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
   <h1>Pro Battle Arena</h1>
-  <p>TDM Tournaments • SOLO / DUO / SQUAD • ₹10–₹500 • 10 Minutes</p>
-  <a class="btn" href="#live">Join Live Tournament</a>
+  <p>TDM SOLO • DUO • SQUAD | Entry ₹10–₹500 | 10 Minute Matches</p>
+  <a href="#join" class="btn">Join Tournament</a>
 </header>
 
-<main class="wrap">
+<main class="container">
 
-  <!-- LIVE TOURNAMENT -->
-  <section id="live" class="card live">
-    <h2>🔥 Live Tournament</h2>
-    <div class="grid">
-      <div>
-        <p><b>Mode:</b> TDM SOLO (1v1)</p>
-        <p><b>Players:</b> 2</p>
-        <p><b>Entry Fee:</b> ₹20</p>
-        <p><b>Duration:</b> 10 Minutes</p>
-        <p><b>Prize:</b> Winner gets prize (UPI)</p>
-      </div>
-      <div class="timer">
-        <h3>⏳ Starts In</h3>
-        <p id="countdown">Loading…</p>
-      </div>
-    </div>
-    <a class="btn primary" href="https://wa.me/91XXXXXXXXXX" target="_blank">Pay & Join</a>
-    <p class="note">Payment first • No refund after start</p>
+  <!-- LIVE INFO -->
+  <section class="card">
+    <h2>🔥 Live Tournaments</h2>
+    <p><b>Modes:</b> TDM SOLO (1v1), DUO (2v2), SQUAD (4v4)</p>
+    <p><b>Entry Fee:</b> ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500</p>
+    <p><b>Duration:</b> 10 Minutes</p>
+    <p><b>Prize:</b> Winner gets prize via UPI</p>
+    <p class="note">Limited slots • Fast matches • Fair play</p>
   </section>
 
   <!-- MODES -->
@@ -43,60 +35,78 @@
 
     <div class="mode">
       <h3>SOLO (1v1)</h3>
-      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500</p>
-      <p>Winner: 1 • Time: 10 minutes</p>
+      <p>2 Players • 1 Winner</p>
+      <p>Entry ₹10–₹500</p>
     </div>
 
     <div class="mode">
       <h3>DUO (2v2)</h3>
-      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500 (per player)</p>
-      <p>Winner Team • Kill-based split • 10 minutes</p>
+      <p>4 Players • Winning Team</p>
+      <p>Kill-based prize distribution</p>
     </div>
 
     <div class="mode">
       <h3>SQUAD (4v4)</h3>
-      <p>Entry: ₹10 / ₹20 / ₹50 / ₹100 / ₹200 / ₹500 (per player)</p>
-      <p>Winner Team • Kill-based split • 10 minutes</p>
+      <p>8 Players • Winning Team</p>
+      <p>Kill-based prize distribution</p>
     </div>
+  </section>
+
+  <!-- JOIN -->
+  <section class="card" id="join">
+    <h2>📲 Join Tournament</h2>
+    <p>Click below to join via WhatsApp.</p>
+
+    <a class="btn primary"
+       href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20join%20today's%20TDM%20tournament."
+       target="_blank">
+       Join on WhatsApp
+    </a>
+
+    <p class="note">Payment first • No refund after match start</p>
   </section>
 
   <!-- RULES -->
   <section class="card">
     <h2>📜 Rules</h2>
-    <ul class="rules">
-      <li>No hacks / cheats</li>
+    <ul>
+      <li>No hacks or cheats</li>
       <li>Emulator not allowed</li>
       <li>Prize only for winning side</li>
-      <li>Kill-based distribution where applicable</li>
+      <li>Kill-based prize distribution</li>
       <li>Screenshot / recording mandatory</li>
-      <li>Admin decision final</li>
+      <li>Admin decision is final</li>
+    </ul>
+  </section>
+
+  <!-- COINS -->
+  <section class="card">
+    <h2>🪙 Earn Coins (Coming Soon)</h2>
+    <p>
+      Players will be able to earn coins by completing simple tasks.<br>
+      Coins can be used as entry fee discount.
+    </p>
+    <ul>
+      <li>Coins are reward points</li>
+      <li>Coins cannot be withdrawn as cash</li>
+      <li>Coins are for entry discounts only</li>
     </ul>
   </section>
 
   <!-- DISCLAIMER -->
   <section class="card">
     <h2>⚠️ Disclaimer</h2>
-    <p>This is a skill-based gaming tournament platform. We are not affiliated with any game publisher.</p>
+    <p>
+      This is a skill-based gaming tournament platform.<br>
+      We are not affiliated with any game publisher or company.
+    </p>
   </section>
 
 </main>
 
 <footer>
-  <p>© 2026 Pro Battle Arena • Play Fair • Skill Based</p>
+  <p>© 2026 Pro Battle Arena | Skill Based Gaming</p>
 </footer>
-
-<script>
-  // 10-minute countdown (change date/time when needed)
-  const startAt = new Date("2026-02-01T18:00:00").getTime();
-  const el = document.getElementById("countdown");
-  setInterval(() => {
-    const d = startAt - Date.now();
-    if (d <= 0) { el.textContent = "LIVE"; return; }
-    const m = Math.floor(d/60000);
-    const s = Math.floor((d%60000)/1000);
-    el.textContent = m + "m " + s + "s";
-  }, 1000);
-</script>
 
 </body>
 </html>
